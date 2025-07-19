@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom romantic theme colors */
+  --warm-brown: hsl(20, 75%, 33%);
+  --burlywood: hsl(34, 57%, 70%);
+  --sandy-brown: hsl(28, 87%, 67%);
+  --cornsilk: hsl(48, 100%, 93%);
+  --cream: hsl(56, 100%, 94%);
+  --dark-brown: hsl(24, 80%, 20%);
+  --rose-gold: hsl(17, 50%, 74%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Lora', serif;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .font-lora {
+    font-family: 'Lora', serif;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: hsla(56, 100%, 94%, 0.95);
+  }
+  
+  .wheel-shadow {
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+  }
+  
+  .result-animation {
+    animation: bounce 0.6s ease-in-out;
+  }
+  
+  .bg-warm-brown {
+    background-color: hsl(var(--warm-brown));
+  }
+  
+  .bg-burlywood {
+    background-color: hsl(var(--burlywood));
+  }
+  
+  .bg-sandy-brown {
+    background-color: hsl(var(--sandy-brown));
+  }
+  
+  .bg-cornsilk {
+    background-color: hsl(var(--cornsilk));
+  }
+  
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+  
+  .bg-dark-brown {
+    background-color: hsl(var(--dark-brown));
+  }
+  
+  .bg-rose-gold {
+    background-color: hsl(var(--rose-gold));
+  }
+  
+  .text-warm-brown {
+    color: hsl(var(--warm-brown));
+  }
+  
+  .text-burlywood {
+    color: hsl(var(--burlywood));
+  }
+  
+  .text-sandy-brown {
+    color: hsl(var(--sandy-brown));
+  }
+  
+  .text-cornsilk {
+    color: hsl(var(--cornsilk));
+  }
+  
+  .text-cream {
+    color: hsl(var(--cream));
+  }
+  
+  .text-dark-brown {
+    color: hsl(var(--dark-brown));
+  }
+  
+  .text-rose-gold {
+    color: hsl(var(--rose-gold));
+  }
+  
+  .border-warm-brown {
+    border-color: hsl(var(--warm-brown));
+  }
+  
+  .border-burlywood {
+    border-color: hsl(var(--burlywood));
+  }
+  
+  .hover\:text-warm-brown:hover {
+    color: hsl(var(--warm-brown));
+  }
+  
+  .from-warm-brown {
+    --tw-gradient-from: hsl(var(--warm-brown));
+  }
+  
+  .to-dark-brown {
+    --tw-gradient-to: hsl(var(--dark-brown));
+  }
+  
+  .from-rose-gold {
+    --tw-gradient-from: hsl(var(--rose-gold));
+  }
+  
+  .to-sandy-brown {
+    --tw-gradient-to: hsl(var(--sandy-brown));
+  }
+  
+  .focus\:border-warm-brown:focus {
+    border-color: hsl(var(--warm-brown));
+  }
+}
+
+@keyframes spin-wheel {
+  from { 
+    transform: rotate(0deg); 
+  }
+  to { 
+    transform: rotate(var(--rotation, 360deg)); 
+  }
+}
+
+.spinning {
+  animation: spin-wheel 3s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+}
